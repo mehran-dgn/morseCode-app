@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="morseCodeApp.Views.MorseGenerator"
+             Title="Encrypt">
+    <VerticalStackLayout>
+        <Label 
+         Text="Enter text"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center" 
+         FontSize="18"/>
+
+        <Frame BorderColor="Gray" 
+            CornerRadius="5"
+                Margin="10"
+                Padding="0"
+                HasShadow="False">
+            <ScrollView HeightRequest="150">
+
+                <Label x:Name="Decrypted_Text" 
+                        VerticalOptions="StartAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                       FontSize="24"
+                       />
+            </ScrollView>
+        </Frame>
+
+        <Label FontSize="18"
+               Text="Encrypted Text"
+               HorizontalOptions="Center"/>
+        <Frame BorderColor="Gray"
+           CornerRadius="5"
+           Margin="10"
+           Padding="0"
+           HasShadow="False">
+
+            <ScrollView HeightRequest="150" >
+                <Label x:Name="Encrypted_Text"
+                       VerticalOptions="StartAndExpand"
+                       HorizontalOptions="FillAndExpand"
+                       FontSize="24"/>
+            </ScrollView>
+        </Frame>
+
+        <Grid ColumnSpacing="5" RowSpacing="5" Padding="10" HorizontalOptions="CenterAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Text="A" Grid.Row="0" Grid.Column="0" Clicked="OnLetterClicked"/>
+            <Button Text="B" Grid.Row="0" Grid.Column="1" Clicked="OnLetterClicked"/>
+            <Button Text="C" Grid.Row="0" Grid.Column="2" Clicked="OnLetterClicked"/>
+            <Button Text="D" Grid.Row="0" Grid.Column="3" Clicked="OnLetterClicked"/>
+            <Button Text="E" Grid.Row="0" Grid.Column="4" Clicked="OnLetterClicked"/>
+            <Button Text="F" Grid.Row="0" Grid.Column="5" Clicked="OnLetterClicked"/>
+
+            <Button Text="G" Grid.Row="1" Grid.Column="0" Clicked="OnLetterClicked"/>
+            <Button Text="H" Grid.Row="1" Grid.Column="1" Clicked="OnLetterClicked"/>
+            <Button Text="I" Grid.Row="1" Grid.Column="2" Clicked="OnLetterClicked"/>
+            <Button Text="J" Grid.Row="1" Grid.Column="3" Clicked="OnLetterClicked"/>
+            <Button Text="K" Grid.Row="1" Grid.Column="4" Clicked="OnLetterClicked"/>
+            <Button Text="L" Grid.Row="1" Grid.Column="5" Clicked="OnLetterClicked"/>
+
+            <Button Text="M" Grid.Row="2" Grid.Column="0" Clicked="OnLetterClicked"/>
+            <Button Text="N" Grid.Row="2" Grid.Column="1" Clicked="OnLetterClicked"/>
+            <Button Text="O" Grid.Row="2" Grid.Column="2" Clicked="OnLetterClicked"/>
+            <Button Text="P" Grid.Row="2" Grid.Column="3" Clicked="OnLetterClicked"/>
+            <Button Text="Q" Grid.Row="2" Grid.Column="4" Clicked="OnLetterClicked"/>
+            <Button Text="R" Grid.Row="2" Grid.Column="5" Clicked="OnLetterClicked"/>
+
+            <Button Text="S" Grid.Row="3" Grid.Column="0" Clicked="OnLetterClicked"/>
+            <Button Text="T" Grid.Row="3" Grid.Column="1" Clicked="OnLetterClicked"/>
+            <Button Text="U" Grid.Row="3" Grid.Column="2" Clicked="OnLetterClicked"/>
+            <Button Text="V" Grid.Row="3" Grid.Column="3" Clicked="OnLetterClicked"/>
+            <Button Text="W" Grid.Row="3" Grid.Column="4" Clicked="OnLetterClicked"/>
+            <Button Text="X" Grid.Row="3" Grid.Column="5" Clicked="OnLetterClicked"/>
+
+            <Button Text="Y" Grid.Row="4" Grid.Column="0" Clicked="OnLetterClicked"/>
+            <Button Text="Z" Grid.Row="4" Grid.Column="1" Clicked="OnLetterClicked"/>
+
+            <Button Text="New Line" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Clicked="OnNewLineClicked"/>
+            <Button Text="Clear All" Grid.Row="4" Grid.Column="4"  Grid.ColumnSpan="2" Clicked="OnClearAllClicked"/>
+            
+            <Button Text="Backspace" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Clicked="OnBackspaceClicked"/>
+            <Button Text="Space" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Clicked="OnSpaceClicked"/>
+
+            <Button Text="Covert" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" Clicked="ConvertToMorse"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
