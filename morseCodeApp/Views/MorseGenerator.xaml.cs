@@ -38,18 +38,25 @@ public partial class MorseGenerator : ContentPage
     private void ConvertToMorse(object sender, EventArgs e)
     {
         Encrypted_Text.Text = string.Empty;
-        string[] lines = Decrypted_Text.Text.Split(new[] { '\n' }, StringSplitOptions.None);
 
+        string[] lines = Decrypted_Text.Text.Split(new[] { '\n' }, StringSplitOptions.None);
+ 
         foreach (string line in lines)
         {
             foreach (char innerItem in line)
             {
                 string character = innerItem.ToString().ToUpper();
-                if (morseDictionary.reverseMorseCodeMap.ContainsKey(character))
-                    Encrypted_Text.Text += morseDictionary.reverseMorseCodeMap[character] + " ";
+ 
+                if (morseDictionary.ReverseMorseCodeMap.ContainsKey(character))
+                {
+                    Encrypted_Text.Text += morseDictionary.ReverseMorseCodeMap[character] + " ";
+                }
                 else
+                { 
                     Encrypted_Text.Text += " ";
+                }
             }
+
             Encrypted_Text.Text += Environment.NewLine;
         }
     }

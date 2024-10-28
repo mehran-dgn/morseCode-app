@@ -47,21 +47,51 @@ namespace morseCodeApp.Views
         {
             Decrypted_Text.Text = string.Empty;
 
-         
             string[] lines = Encrypted_Text.Text.Split(new[] { '\n' }, StringSplitOptions.None);
 
             foreach (string line in lines)
             {
-         
-                foreach (string item in line.Split(" "))
+                string decryptedLine = string.Empty;
+
+                string morseCodeChar = string.Empty;
+
+                foreach (char c in line)
                 {
-                    if (morseDictionrary.morseCodeMap.ContainsKey(item))
-                        Decrypted_Text.Text += morseDictionrary.morseCodeMap[item];
+                    if (c == ' ')
+                    {
+                        if (!string.IsNullOrEmpty(morseCodeChar))
+                        {
+                            if (morseDictionrary.morseCodeMap.ContainsKey(morseCodeChar))
+                            {
+                                decryptedLine += morseDictionrary.morseCodeMap[morseCodeChar];
+                            }
+                            else
+                            {
+                                decryptedLine += "_"; 
+                            }
+                            morseCodeChar = string.Empty; 
+                        }
+                        
+                        decryptedLine += " ";
+                    }
                     else
-                        Decrypted_Text.Text += "_";
+                    {
+                        morseCodeChar += c;
+                    }
+                }
+                if (!string.IsNullOrEmpty(morseCodeChar))
+                {
+                    if (morseDictionrary.morseCodeMap.ContainsKey(morseCodeChar))
+                    {
+                        decryptedLine += morseDictionrary.morseCodeMap[morseCodeChar];
+                    }
+                    else
+                    {
+                        decryptedLine += "_";  
+                    }
                 }
 
-                Decrypted_Text.Text += Environment.NewLine;
+                Decrypted_Text.Text += decryptedLine + Environment.NewLine;
             }
         }
 

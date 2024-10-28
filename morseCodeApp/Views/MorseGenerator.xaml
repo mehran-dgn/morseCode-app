@@ -41,64 +41,129 @@
                        FontSize="24"/>
             </ScrollView>
         </Frame>
-
-        <Grid ColumnSpacing="5" RowSpacing="5" Padding="10" HorizontalOptions="CenterAndExpand" >
+        <StackLayout Padding="10,0,10,0" >
+            <Grid ColumnSpacing="1" Margin="10,0,10,0" RowSpacing="5"  HorizontalOptions="CenterAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Text="Q" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="0" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="W" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="1" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="E" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="2" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="R" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="3" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="T" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="4" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="Y" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="5" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="U" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="6" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="I" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="7" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="O" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="8" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+            <Button Text="P" Grid.Row="0" FontSize="10" WidthRequest="40" HeightRequest="40" Grid.Column="9" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
 
-            <Button Text="A" Grid.Row="0" Grid.Column="0" Clicked="OnLetterClicked"/>
-            <Button Text="B" Grid.Row="0" Grid.Column="1" Clicked="OnLetterClicked"/>
-            <Button Text="C" Grid.Row="0" Grid.Column="2" Clicked="OnLetterClicked"/>
-            <Button Text="D" Grid.Row="0" Grid.Column="3" Clicked="OnLetterClicked"/>
-            <Button Text="E" Grid.Row="0" Grid.Column="4" Clicked="OnLetterClicked"/>
-            <Button Text="F" Grid.Row="0" Grid.Column="5" Clicked="OnLetterClicked"/>
+                <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="10">
+                    <Grid ColumnSpacing="1"   HorizontalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Text="A" Grid.Row="0" FontSize="10" Grid.Column="0" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="S" Grid.Row="0" FontSize="10" Grid.Column="1" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="D" Grid.Row="0" FontSize="10" Grid.Column="2" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="F" Grid.Row="0" FontSize="10" Grid.Column="3" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="G" Grid.Row="0" FontSize="10" Grid.Column="4" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="H" Grid.Row="0" FontSize="10" Grid.Column="5" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="J" Grid.Row="0" FontSize="10" Grid.Column="6" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="K" Grid.Row="0" FontSize="10" Grid.Column="7" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="L" Grid.Row="0" FontSize="10" Grid.Column="8" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                    </Grid>
 
-            <Button Text="G" Grid.Row="1" Grid.Column="0" Clicked="OnLetterClicked"/>
-            <Button Text="H" Grid.Row="1" Grid.Column="1" Clicked="OnLetterClicked"/>
-            <Button Text="I" Grid.Row="1" Grid.Column="2" Clicked="OnLetterClicked"/>
-            <Button Text="J" Grid.Row="1" Grid.Column="3" Clicked="OnLetterClicked"/>
-            <Button Text="K" Grid.Row="1" Grid.Column="4" Clicked="OnLetterClicked"/>
-            <Button Text="L" Grid.Row="1" Grid.Column="5" Clicked="OnLetterClicked"/>
+                </StackLayout>
 
-            <Button Text="M" Grid.Row="2" Grid.Column="0" Clicked="OnLetterClicked"/>
-            <Button Text="N" Grid.Row="2" Grid.Column="1" Clicked="OnLetterClicked"/>
-            <Button Text="O" Grid.Row="2" Grid.Column="2" Clicked="OnLetterClicked"/>
-            <Button Text="P" Grid.Row="2" Grid.Column="3" Clicked="OnLetterClicked"/>
-            <Button Text="Q" Grid.Row="2" Grid.Column="4" Clicked="OnLetterClicked"/>
-            <Button Text="R" Grid.Row="2" Grid.Column="5" Clicked="OnLetterClicked"/>
 
-            <Button Text="S" Grid.Row="3" Grid.Column="0" Clicked="OnLetterClicked"/>
-            <Button Text="T" Grid.Row="3" Grid.Column="1" Clicked="OnLetterClicked"/>
-            <Button Text="U" Grid.Row="3" Grid.Column="2" Clicked="OnLetterClicked"/>
-            <Button Text="V" Grid.Row="3" Grid.Column="3" Clicked="OnLetterClicked"/>
-            <Button Text="W" Grid.Row="3" Grid.Column="4" Clicked="OnLetterClicked"/>
-            <Button Text="X" Grid.Row="3" Grid.Column="5" Clicked="OnLetterClicked"/>
+                <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="10">
+                    <Grid ColumnSpacing="1"   HorizontalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Text="Z" Grid.Row="0" FontSize="10" Grid.Column="0" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="X" Grid.Row="0" FontSize="10" Grid.Column="1" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="C" Grid.Row="0" FontSize="10" Grid.Column="2" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="V" Grid.Row="0" FontSize="10" Grid.Column="3" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="B" Grid.Row="0" FontSize="10" Grid.Column="4" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="N" Grid.Row="0" FontSize="10" Grid.Column="5" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <Button Text="M" Grid.Row="0" FontSize="10" Grid.Column="6" WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnLetterClicked"/>
+                        <ImageButton Source="Resources/Images/linebreak.png" CornerRadius="5" Grid.Row="0" Grid.Column="7"  WidthRequest="40" HeightRequest="40"  BackgroundColor="#488bcf" Clicked="OnNewLineClicked"/>
+                        <ImageButton Source="Resources/Images/clear.png" CornerRadius="5" Grid.Row="0" Grid.Column="8" WidthRequest="40" HeightRequest="40"  BackgroundColor="#488bcf" Clicked="OnClearAllClicked"/>
+                        <ImageButton Source="Resources/Images/backspace.png" CornerRadius="5" Grid.Row="0" Grid.Column="9"  WidthRequest="40" HeightRequest="40" BackgroundColor="#488bcf" Clicked="OnBackspaceClicked"/>
+                    </Grid>
 
-            <Button Text="Y" Grid.Row="4" Grid.Column="0" Clicked="OnLetterClicked"/>
-            <Button Text="Z" Grid.Row="4" Grid.Column="1" Clicked="OnLetterClicked"/>
 
-            <Button Text="New Line" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Clicked="OnNewLineClicked"/>
-            <Button Text="Clear All" Grid.Row="4" Grid.Column="4"  Grid.ColumnSpan="2" Clicked="OnClearAllClicked"/>
-            
-            <Button Text="Backspace" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Clicked="OnBackspaceClicked"/>
-            <Button Text="Space" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Clicked="OnSpaceClicked"/>
+                </StackLayout>
+           
 
-            <Button Text="Covert" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" Clicked="ConvertToMorse"/>
-        </Grid>
 
+                <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="10">
+                    <Grid ColumnSpacing="1"   HorizontalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Text="Space" Margin="0,0,0,0" Grid.Row="0" FontSize="13" Grid.Column="0" WidthRequest="280" BackgroundColor="#488bcf" Clicked="OnSpaceClicked"/>
+                        <Button Text="Convert" Margin="0,0,0,0" Grid.Row="0" FontSize="13" Grid.Column="1" WidthRequest="115" BackgroundColor="#488bcf" Clicked="ConvertToMorse"/>                        
+                    </Grid>
+
+                </StackLayout>
+
+
+
+            </Grid>
+        </StackLayout>
     </VerticalStackLayout>
 </ContentPage>

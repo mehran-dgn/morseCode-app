@@ -10,11 +10,16 @@
         <ShellContent
         Title="Create Morse Code"
         ContentTemplate="{DataTemplate views:MorseGenerator}"/>
-
+        <ShellContent 
+     Title="Learn"
+     ContentTemplate="{DataTemplate views:Learn}"
+     />
         <ShellContent 
             Title="Decrypt Morse Code"    
             ContentTemplate="{DataTemplate views:MorseDecrypt}"
         />
+
+       
     </TabBar>
 
 

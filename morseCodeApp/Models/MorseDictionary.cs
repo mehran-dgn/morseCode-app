@@ -38,7 +38,8 @@ namespace morseCodeApp.Models
     { "--..", "Z" }
     };
 
-        public Dictionary<string, string> reverseMorseCodeMap = new Dictionary<string, string>
+        public Dictionary<string, string> ReverseMorseCodeMap { get; } = new Dictionary<string, string>
+
 {
     { "A", ".-" },
     { "B", "-..." },

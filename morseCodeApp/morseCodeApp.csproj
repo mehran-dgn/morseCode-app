@@ -38,9 +38,13 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#488bcf" />
 
 		<!-- Splash Screen -->
 
@@ -71,10 +75,14 @@
 
 
 	<ItemGroup>
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" />
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#488bcf" />
+		
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <MauiXaml Update="Views\Learn.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\MorseDecrypt.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -82,5 +90,10 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
-
+	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+		<AndroidSigningKeyStore>..\MorseCode.keystore</AndroidSigningKeyStore>
+		<AndroidSigningKeyAlias>MorseCode</AndroidSigningKeyAlias>
+		<AndroidSigningKeyPass>password</AndroidSigningKeyPass>
+		<AndroidSigningStorePass>password</AndroidSigningStorePass>
+	</PropertyGroup>
 </Project>

@@ -1,0 +1,23 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="morseCodeApp.Views.Learn"  
+             Title="Learn">
+    <ScrollView VerticalOptions="FillAndExpand">
+        <VerticalStackLayout Padding="10">
+            <CollectionView ItemsSource="{Binding MorseCodes}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" Margin="0,5" CornerRadius="15" BackgroundColor="#488bcf" HasShadow="True">
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Label Text="{Binding Key}" TextColor="White" FontSize="24" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding Value}" TextColor="White" FontSize="32" HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Other dynamic content can be added here if needed -->
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

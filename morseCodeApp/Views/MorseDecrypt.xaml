@@ -43,7 +43,7 @@ HorizontalOptions="FillAndExpand"
                 </ScrollView>
             </Frame>
 
-            <Grid HorizontalOptions="CenterAndExpand" WidthRequest="300">
+            <Grid HorizontalOptions="CenterAndExpand" WidthRequest="300" ColumnSpacing="10" RowSpacing="5">
                 <!-- Set desired total width here -->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -57,12 +57,10 @@ HorizontalOptions="FillAndExpand"
                 </Grid.ColumnDefinitions>
 
 
-                <Grid HorizontalOptions="CenterAndExpand" WidthRequest="300" Grid.ColumnSpan="3">
+                <Grid HorizontalOptions="CenterAndExpand" WidthRequest="300" Grid.ColumnSpan="3" ColumnSpacing="10">
                     <!-- Set desired total width here -->
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -70,16 +68,16 @@ HorizontalOptions="FillAndExpand"
                     </Grid.ColumnDefinitions>
                     <ImageButton Source="Resources/Images/morse_dot.png"
                                  WidthRequest="150"
-                                 HeightRequest="100"
-                                 CornerRadius="35"
-                                 BackgroundColor="#909aab"
+                                 HeightRequest="80"
+                                 CornerRadius="15"
+                                 BackgroundColor="#385e9c"
                                  Clicked="MorseDot_Clicked"
                                  Grid.Row="0" Grid.Column="0"/> 
                     <ImageButton Source="Resources/Images/morse_dash.png"
                                  WidthRequest="150"
-                                 HeightRequest="100"
-                                 CornerRadius="35"
-                                 BackgroundColor="#909aab"
+                                 HeightRequest="80"
+                                 CornerRadius="15"
+                                 BackgroundColor="#385e9c"
                                  Clicked="MorseDash_Clicked"
                                  Grid.Row="0" Grid.Column="2"/>
 
@@ -88,45 +86,46 @@ HorizontalOptions="FillAndExpand"
               
                 <Button Text="New Line"
                         WidthRequest="100"
-                        HeightRequest="100"
-                        CornerRadius="35"
-                        BackgroundColor="#909aab"
+                        HeightRequest="80"
+                        CornerRadius="15"
+                        BackgroundColor="#488bcf"
                         Clicked="BreakLine_Clicked"
                         Grid.Row="1" Grid.Column="0"/>
                 <Button Text="Remove"
                         WidthRequest="100"
-                        HeightRequest="100"
-                        CornerRadius="35"
-                        BackgroundColor="#909aab"
+                        HeightRequest="80"
+                        CornerRadius="15"
+                        BackgroundColor="#488bcf"
                         Grid.Row="1" Grid.Column="1"
                         Clicked="BackSpace_Clicked"/>
-                <Button Text="Clear"
-                     WidthRequest="100"
-                     HeightRequest="100"
-                     CornerRadius="35"  
-                     BackgroundColor="#909aab"
-                     Clicked="ClearAll_Clicked"
-                     Grid.Row="1" Grid.Column="2"
-                            />
+               
+                <Button Text="Convert"
+        WidthRequest="100"
+        HeightRequest="80"
+        CornerRadius="15"
+        BackgroundColor="#488bcf"
+        Grid.Row="1"
+        Grid.Column="2"
+        Clicked="ConvertBtn_Clicked"/>
 
                 <Button Text="Space"
                      WidthRequest="200"
-                     HeightRequest="100"
-                     CornerRadius="35"
-                     BackgroundColor="#909aab"
+                     HeightRequest="80"
+                     CornerRadius="15"
+                     BackgroundColor="#488bcf"
                      Clicked="SpaceBtn_Clicked"
                      Grid.Row="2" Grid.Column="0"
                      Grid.ColumnSpan="2"/>
 
-                <Button Text="Convert"
-                        WidthRequest="100"
-                        HeightRequest="100"
-                        CornerRadius="35"
-                        BackgroundColor="#909aab"
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        Clicked="ConvertBtn_Clicked"/>
 
+                <Button Text="Clear"
+      WidthRequest="100"
+      HeightRequest="80"
+      CornerRadius="15"  
+      BackgroundColor="#488bcf"
+      Clicked="ClearAll_Clicked"
+      Grid.Row="2" Grid.Column="2"
+             />
 
             </Grid>
         </VerticalStackLayout>
